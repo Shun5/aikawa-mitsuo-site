@@ -10,3 +10,17 @@ Thumbs.db
 
 # Logs
 *.log
+
+# 内部資料（公開サイトに含めない / 画像はindex.htmlへインライン済み）
+/*.pdf
+/*.zip
+/IIJ.png
+/KLab.png
+/abc_mart_logo.png
+/all about_image.png
+/gungho-og.png
+/コロプラ.png
+/CLAUDE.md
+
+# デプロイ用ステージングディレクトリ（CLI deploy 専用）
+/_site/
