@@ -1,0 +1,18 @@
+# Netlify configuration — 相川光生 オフィシャルサイト
+
+[build]
+  # ビルド工程は不要（静的HTMLのみ）。公開対象はリポジトリ直下。
+  publish = "."
+
+# 基本的なセキュリティ・キャッシュヘッダ
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
