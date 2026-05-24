@@ -310,80 +310,6 @@ body { font-family: var(--sans); color: var(--text-dark); background: var(--crea
 .ai-th { font-family: var(--serif); font-size: 0.88rem; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.14); padding: 10px 22px; letter-spacing: 0.05em; transition: all 0.3s; cursor: default; }
 .ai-th:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ===================== Contact ===================== */
-.sec-contact { background: var(--cream); position: relative; overflow: hidden; }
-.sec-contact::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
-  opacity: 0.5;
-}
-.ct-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-.ct-hd { text-align: center; margin-bottom: 56px; }
-.ct-en { font-family: var(--garamond); font-size: 0.78rem; letter-spacing: 0.34em; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
-.ct-jp { font-family: var(--serif); font-size: clamp(2.1rem, 3.4vw, 3rem); font-weight: 300; line-height: 1.3; letter-spacing: 0.08em; color: var(--navy); }
-.ct-desc { font-family: var(--serif); font-size: 1rem; font-weight: 300; color: var(--text-mid); line-height: 2.1; margin-top: 22px; max-width: 540px; margin-left: auto; margin-right: auto; }
-.ct-deco { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 30px 0 0; }
-.ct-deco .divider-l { width: 56px; }
-
-.ct-form { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 40px; }
-.ct-field { display: flex; flex-direction: column; gap: 10px; position: relative; }
-.ct-field.full { grid-column: 1 / -1; }
-.ct-label { font-family: var(--serif); font-size: 0.82rem; letter-spacing: 0.12em; color: var(--navy); display: flex; align-items: center; gap: 8px; }
-.ct-req { font-family: var(--garamond); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--gold); border: 1px solid var(--border); padding: 1px 8px; border-radius: 1px; }
-.ct-opt { font-family: var(--garamond); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-light); }
-
-.ct-input, .ct-select, .ct-textarea {
-  font-family: var(--sans); font-size: 0.95rem; color: var(--text-dark);
-  background: transparent; border: none; border-bottom: 1px solid var(--border);
-  padding: 12px 2px; transition: border-color 0.35s, box-shadow 0.35s; width: 100%;
-  border-radius: 0; -webkit-appearance: none; appearance: none;
-}
-.ct-textarea { resize: vertical; min-height: 130px; line-height: 1.9; }
-.ct-input:focus, .ct-select:focus, .ct-textarea:focus {
-  outline: none; border-bottom-color: var(--gold);
-  box-shadow: 0 1px 0 0 var(--gold);
-}
-.ct-input::placeholder, .ct-textarea::placeholder { color: var(--text-light); opacity: 0.7; }
-.ct-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a84c' stroke-width='1.3' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 4px center; padding-right: 26px; }
-.ct-select option { color: var(--text-dark); }
-
-.ct-field.error .ct-input, .ct-field.error .ct-select, .ct-field.error .ct-textarea { border-bottom-color: #b3402f; box-shadow: 0 1px 0 0 #b3402f; }
-.ct-err { font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.04em; color: #b3402f; min-height: 1em; opacity: 0; transition: opacity 0.25s; }
-.ct-field.error .ct-err { opacity: 1; }
-
-.ct-agree { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 12px; margin-top: 4px; }
-.ct-agree input { margin-top: 4px; width: 16px; height: 16px; accent-color: var(--gold); flex-shrink: 0; }
-.ct-agree label { font-family: var(--serif); font-size: 0.82rem; color: var(--text-mid); line-height: 1.9; cursor: pointer; }
-.ct-agree a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
-
-.ct-submit-wrap { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 18px; }
-.ct-btn {
-  border: none; cursor: pointer; font-family: var(--serif); font-size: 1rem;
-  letter-spacing: 0.14em; padding: 21px 64px; background: var(--navy); color: var(--white);
-  display: inline-flex; align-items: center; gap: 12px; transition: all 0.35s; border-radius: 2px;
-}
-.ct-btn:hover { background: var(--gold); color: var(--navy); }
-.ct-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.ct-btn .btn-ar { font-size: 1.1rem; transition: transform 0.3s; }
-.ct-btn:hover .btn-ar { transform: translateX(6px); }
-.ct-note { font-family: var(--sans); font-size: 0.76rem; color: var(--text-light); letter-spacing: 0.03em; text-align: center; line-height: 1.8; }
-
-.ct-success {
-  grid-column: 1 / -1; text-align: center; padding: 40px 20px;
-  border: 1px solid var(--border); background: rgba(201,168,76,0.05); border-radius: 3px;
-  display: none; flex-direction: column; align-items: center; gap: 16px;
-}
-.ct-success.show { display: flex; animation: fadeUp 0.7s forwards; }
-.ct-success-ico { width: 56px; height: 56px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); }
-.ct-success-t { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--navy); letter-spacing: 0.06em; }
-.ct-success-d { font-family: var(--serif); font-size: 0.92rem; font-weight: 300; color: var(--text-mid); line-height: 2; max-width: 440px; }
-
-@media (max-width: 760px) {
-  .ct-form { grid-template-columns: 1fr; gap: 28px; }
-  .ct-hd { margin-bottom: 40px; }
-  .ct-btn { width: 100%; justify-content: center; padding: 19px 32px; }
-}
-
 /* ===================== Footer ===================== */
 .footer { background: #08111e; padding: 84px 88px; border-top: 1px solid var(--border); }
 .ft-inner { display: grid; grid-template-columns: 1fr auto auto; gap: 84px; align-items: start; margin-bottom: 64px; }
@@ -485,7 +411,6 @@ body { font-family: var(--sans); color: var(--text-dark); background: var(--crea
     <li><a href="#timeline" data-i18n="nav_timeline">年譜</a></li>
     <li><a href="#philosophy" data-i18n="nav_philosophy">思想</a></li>
     <li><a href="#publication" data-i18n="nav_publication">著書</a></li>
-    <li><a href="#contact" data-i18n="nav_contact">お問い合わせ</a></li>
     <li>
       <button class="lang-toggle" id="langBtn" onclick="toggleLang()" aria-label="Switch Language">
         <span class="lang-jp">JP</span>
@@ -937,79 +862,6 @@ body { font-family: var(--sans); color: var(--text-dark); background: var(--crea
 </section>
 
 
-<!-- CONTACT -->
-<section class="sec sec-contact" id="contact">
-  <div class="ct-inner">
-    <div class="ct-hd rv">
-      <div class="ct-en">Contact</div>
-      <h2 class="ct-jp" data-i18n="ct_title">お問い合わせ</h2>
-      <p class="ct-desc" data-i18n="ct_desc">相川塾、講演・取材のご依頼、顧問・経営相談など、お気軽にご連絡ください。内容を確認のうえ、担当者よりご返信いたします。</p>
-      <div class="ct-deco"><span class="divider-l"></span><span class="divider-d"></span><span class="divider-l"></span></div>
-    </div>
-
-    <form class="ct-form rv" id="contactForm" novalidate>
-      <div class="ct-field">
-        <label class="ct-label" for="cf-name"><span data-i18n="ct_name">お名前</span><span class="ct-req" data-i18n="ct_required">必須</span></label>
-        <input class="ct-input" type="text" id="cf-name" name="name" autocomplete="name" data-i18n-ph="ct_name_ph" placeholder="山田 太郎">
-        <span class="ct-err" data-err="name" data-i18n="ct_err_name">お名前をご入力ください</span>
-      </div>
-
-      <div class="ct-field">
-        <label class="ct-label" for="cf-company"><span data-i18n="ct_company">会社・団体名</span><span class="ct-opt" data-i18n="ct_optional">任意</span></label>
-        <input class="ct-input" type="text" id="cf-company" name="company" autocomplete="organization" data-i18n-ph="ct_company_ph" placeholder="株式会社○○">
-        <span class="ct-err"></span>
-      </div>
-
-      <div class="ct-field">
-        <label class="ct-label" for="cf-email"><span data-i18n="ct_email">メールアドレス</span><span class="ct-req" data-i18n="ct_required">必須</span></label>
-        <input class="ct-input" type="email" id="cf-email" name="email" autocomplete="email" data-i18n-ph="ct_email_ph" placeholder="name@example.com">
-        <span class="ct-err" data-err="email" data-i18n="ct_err_email">正しいメールアドレスをご入力ください</span>
-      </div>
-
-      <div class="ct-field">
-        <label class="ct-label" for="cf-subject"><span data-i18n="ct_subject">ご用件</span><span class="ct-req" data-i18n="ct_required">必須</span></label>
-        <select class="ct-select" id="cf-subject" name="subject">
-          <option value="" disabled selected data-i18n="ct_subject_ph">選択してください</option>
-          <option value="相川塾について" data-i18n="ct_subj1">相川塾について</option>
-          <option value="講演・取材のご依頼" data-i18n="ct_subj2">講演・取材のご依頼</option>
-          <option value="顧問・経営相談" data-i18n="ct_subj3">顧問・経営相談</option>
-          <option value="著書について" data-i18n="ct_subj4">著書について</option>
-          <option value="その他" data-i18n="ct_subj5">その他</option>
-        </select>
-        <span class="ct-err" data-err="subject" data-i18n="ct_err_subject">ご用件をお選びください</span>
-      </div>
-
-      <div class="ct-field full">
-        <label class="ct-label" for="cf-message"><span data-i18n="ct_message">お問い合わせ内容</span><span class="ct-req" data-i18n="ct_required">必須</span></label>
-        <textarea class="ct-textarea" id="cf-message" name="message" data-i18n-ph="ct_message_ph" placeholder="お問い合わせ内容をご記入ください。"></textarea>
-        <span class="ct-err" data-err="message" data-i18n="ct_err_message">お問い合わせ内容をご入力ください</span>
-      </div>
-
-      <div class="ct-agree">
-        <input type="checkbox" id="cf-agree" name="agree">
-        <label for="cf-agree" data-i18n-html="ct_agree">個人情報の取り扱いに同意のうえ送信します。</label>
-      </div>
-      <span class="ct-err" data-err="agree" style="grid-column:1/-1;margin-top:-8px;" data-i18n="ct_err_agree">同意のうえ送信してください</span>
-
-      <div class="ct-submit-wrap">
-        <button type="submit" class="ct-btn" id="cf-submit">
-          <span data-i18n="ct_send">送信する</span> <span class="btn-ar">→</span>
-        </button>
-        <p class="ct-note" data-i18n="ct_note">送信ボタンを押すと、ご入力内容をもとにメール作成画面が開きます。</p>
-      </div>
-
-      <div class="ct-success" id="cf-success">
-        <div class="ct-success-ico">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
-        <div class="ct-success-t" data-i18n="ct_success_t">送信ありがとうございます</div>
-        <div class="ct-success-d" data-i18n="ct_success_d">メール作成画面が開きます。送信が完了しましたら、担当者より順次ご返信いたします。今しばらくお待ちください。</div>
-      </div>
-    </form>
-  </div>
-</section>
-
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="ft-inner">
@@ -1025,7 +877,6 @@ body { font-family: var(--sans); color: var(--text-dark); background: var(--crea
         <li><a href="#timeline" data-i18n="nav_timeline">年譜</a></li>
         <li><a href="#philosophy" data-i18n="nav_philosophy">思想</a></li>
         <li><a href="#publication" data-i18n="nav_publication">著書</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">お問い合わせ</a></li>
       </ul>
     </div>
     <div>
@@ -1161,16 +1012,6 @@ const i18n = {
     ft_site:'Site', ft_connect:'Connect',
     ft_profile:'プロフィール', ft_timeline:'年譜', ft_philosophy:'思想', ft_publication:'著書',
     ft_ai:'相川AIと対話する', ft_100kw:'100 Keywords', ft_about:'著者について',
-    ct_title:'お問い合わせ', ct_desc:'相川塾、講演・取材のご依頼、顧問・経営相談など、お気軽にご連絡ください。内容を確認のうえ、担当者よりご返信いたします。',
-    ct_name:'お名前', ct_name_ph:'山田 太郎', ct_company:'会社・団体名', ct_company_ph:'株式会社○○',
-    ct_email:'メールアドレス', ct_email_ph:'name@example.com', ct_subject:'ご用件', ct_subject_ph:'選択してください',
-    ct_subj1:'相川塾について', ct_subj2:'講演・取材のご依頼', ct_subj3:'顧問・経営相談', ct_subj4:'著書について', ct_subj5:'その他',
-    ct_message:'お問い合わせ内容', ct_message_ph:'お問い合わせ内容をご記入ください。',
-    ct_required:'必須', ct_optional:'任意', ct_agree:'個人情報の取り扱いに同意のうえ送信します。',
-    ct_send:'送信する', ct_note:'お預かりした内容は担当者が確認し、順次ご返信いたします。',
-    ct_err_name:'お名前をご入力ください', ct_err_email:'正しいメールアドレスをご入力ください', ct_err_subject:'ご用件をお選びください', ct_err_message:'お問い合わせ内容をご入力ください', ct_err_agree:'同意のうえ送信してください',
-    ct_success_t:'送信ありがとうございます', ct_success_d:'お問い合わせを受け付けました。担当者より順次ご返信いたしますので、今しばらくお待ちください。', ct_success_d_mail:'メール作成画面が開きます。そのまま送信を完了してください。確認のうえ、担当者より順次ご返信いたします。',
-    nav_contact:'お問い合わせ',
     ft_copy2:'相川光生 オフィシャルサイト',
     /* Timeline years */
     tl_yr1:'一橋大', tl_yr2:'大和銀行', tl_yr3:'トーマツ', tl_yr4:'設立',
@@ -1268,16 +1109,6 @@ const i18n = {
     ft_site:"Site", ft_connect:"Connect",
     ft_profile:"Profile", ft_timeline:"History", ft_philosophy:"Philosophy", ft_publication:"Book",
     ft_ai:"Talk to Aikawa AI", ft_100kw:"100 Keywords", ft_about:"About the Author",
-    ct_title:"Contact", ct_desc:"For Aikawa Juku, speaking and media inquiries, or advisory and management consultation, please feel free to reach out. We will review your message and reply in due course.",
-    ct_name:"Name", ct_name_ph:"Taro Yamada", ct_company:"Company / Organization", ct_company_ph:"Your company",
-    ct_email:"Email", ct_email_ph:"name@example.com", ct_subject:"Subject", ct_subject_ph:"Please select",
-    ct_subj1:"About Aikawa Juku", ct_subj2:"Speaking / Media", ct_subj3:"Advisory / Consulting", ct_subj4:"About the book", ct_subj5:"Other",
-    ct_message:"Message", ct_message_ph:"Please enter your message.",
-    ct_required:"Required", ct_optional:"Optional", ct_agree:"I agree to the handling of my personal information.",
-    ct_send:"Send", ct_note:"Your message will be reviewed by our team, and we will reply in due course.",
-    ct_err_name:"Please enter your name", ct_err_email:"Please enter a valid email address", ct_err_subject:"Please select a subject", ct_err_message:"Please enter your message", ct_err_agree:"Please agree before sending",
-    ct_success_t:"Thank you for your message", ct_success_d:"Your inquiry has been received. Our team will reply in due course. Thank you for your patience.", ct_success_d_mail:"Your email client will open. Please complete the send. We will reply once we receive your message.",
-    nav_contact:"Contact",
     ft_copy2:"Mitsuo Aikawa Official Site",
     tl_yr1:"Hitotsubashi", tl_yr2:"Daiwa Bank", tl_yr3:"Tohmatsu", tl_yr4:"Founded",
     tl_yr5:"IPO Advisory", tl_yr6:"Outside Auditor", tl_yr7:"Book", tl_yr9:"Present",
@@ -1401,129 +1232,6 @@ function toggleLang() {
   applyLang(saved);
 })();
 
-/* ========== Contact form ========== */
-(function () {
-  var form = document.getElementById('contactForm');
-  if (!form) return;
-
-  // ▼▼ 送信先設定 ▼▼
-  // GAS（Google Apps Script）連携:
-  //   下に GAS ウェブアプリの URL を設定すると、送信内容がスプレッドシートに
-  //   自動転記され、指定アドレスへ通知メールが届きます（別添の Code.gs と手順書を参照）。
-  var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMLGlP-alEVxa2vuiUEGrRAmwWKcgcN6rAcz10XKefaMHU-Qn3cEFCi7LreqsTXTI5w/exec';
-  // フォールバック: GAS_ENDPOINT が未設定のときはメール作成画面(mailto)を開きます。
-  var CONTACT_EMAIL = 'contact@example.com';   // mailto フォールバック用の宛先（任意）
-  // ▲▲ 送信先設定 ▲▲
-
-  var fields = {
-    name:    document.getElementById('cf-name'),
-    email:   document.getElementById('cf-email'),
-    subject: document.getElementById('cf-subject'),
-    message: document.getElementById('cf-message'),
-    company: document.getElementById('cf-company'),
-    agree:   document.getElementById('cf-agree')
-  };
-  var submitBtn = document.getElementById('cf-submit');
-  var successBox = document.getElementById('cf-success');
-
-  function setError(key, on) {
-    var el = (key === 'agree') ? document.querySelector('.ct-agree') : fields[key].closest('.ct-field');
-    if (!el) return;
-    el.classList.toggle('error', !!on);
-    var errSpan = document.querySelector('[data-err="' + key + '"]');
-    if (errSpan) errSpan.style.opacity = on ? '1' : '';
-  }
-
-  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-
-  function validate() {
-    var ok = true;
-    if (!fields.name.value.trim())            { setError('name', true); ok = false; }    else setError('name', false);
-    if (!validEmail(fields.email.value.trim())){ setError('email', true); ok = false; }   else setError('email', false);
-    if (!fields.subject.value)                { setError('subject', true); ok = false; }  else setError('subject', false);
-    if (!fields.message.value.trim())         { setError('message', true); ok = false; }  else setError('message', false);
-    if (!fields.agree.checked)                { setError('agree', true); ok = false; }    else setError('agree', false);
-    return ok;
-  }
-
-  // 入力時にエラー表示を解除
-  ['name', 'email', 'subject', 'message'].forEach(function (k) {
-    fields[k].addEventListener('input', function () { setError(k, false); });
-    fields[k].addEventListener('change', function () { setError(k, false); });
-  });
-  fields.agree.addEventListener('change', function () { setError('agree', false); });
-
-  function showSuccess() {
-    form.querySelectorAll('.ct-field, .ct-agree, .ct-submit-wrap, [data-err="agree"]').forEach(function (el) {
-      el.style.display = 'none';
-    });
-    successBox.classList.add('show');
-    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
-  function buildMailto() {
-    var subjLabel = fields.subject.options[fields.subject.selectedIndex].text;
-    var lang = (document.documentElement.lang === 'en') ? 'en' : 'ja';
-    var subject = (lang === 'en' ? '[Website inquiry] ' : '【お問い合わせ】') + subjLabel;
-    var lines = (lang === 'en')
-      ? ['Name: ' + fields.name.value.trim(),
-         'Company: ' + (fields.company.value.trim() || '-'),
-         'Email: ' + fields.email.value.trim(),
-         'Subject: ' + subjLabel, '',
-         fields.message.value.trim()]
-      : ['お名前: ' + fields.name.value.trim(),
-         '会社・団体名: ' + (fields.company.value.trim() || '（なし）'),
-         'メール: ' + fields.email.value.trim(),
-         'ご用件: ' + subjLabel, '',
-         fields.message.value.trim()];
-    return 'mailto:' + CONTACT_EMAIL +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(lines.join('\n'));
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!validate()) {
-      var firstErr = form.querySelector('.error');
-      if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    // GAS 連携: エンドポイントが設定されていれば送信（スプレッドシート転記＋メール通知）
-    if (GAS_ENDPOINT) {
-      submitBtn.disabled = true;
-      var payload = {
-        name: fields.name.value.trim(),
-        company: fields.company.value.trim(),
-        email: fields.email.value.trim(),
-        subject: fields.subject.value,
-        message: fields.message.value.trim(),
-        lang: (document.documentElement.lang === 'en') ? 'en' : 'ja',
-        page: location.href
-      };
-      // GAS ウェブアプリは CORS ヘッダを返さないため、no-cors + text/plain で送信（プリフライト回避）
-      fetch(GAS_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      }).then(function () {
-        showSuccess();
-      }).catch(function () {
-        submitBtn.disabled = false;
-        alert('送信に失敗しました。通信環境をご確認のうえ、再度お試しください。');
-      });
-      return;
-    }
-
-    // 方式A（既定）: メール作成画面を開く
-    var _lang = (document.documentElement.lang === 'en') ? 'en' : 'ja';
-    var _sd = document.querySelector('.ct-success-d');
-    if (_sd && i18n[_lang] && i18n[_lang].ct_success_d_mail) _sd.textContent = i18n[_lang].ct_success_d_mail;
-    window.location.href = buildMailto();
-    showSuccess();
-  });
-})();
 </script>
 </body>
 </html>
